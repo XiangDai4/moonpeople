@@ -1,0 +1,205 @@
+/* Register.css */
+
+.register-page {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.register-page__container {
+  width: 100%;
+  max-width: 480px;
+  padding: 0 var(--spacing-md);
+}
+
+.register-page__card {
+  background: var(--white);
+  border: var(--border-width) solid var(--neutral-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.register-page__title {
+  color: var(--primary-color);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.register-page__alert {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-lg);
+  border: var(--border-width) solid transparent;
+}
+
+.register-page__alert--error {
+  background-color: rgba(229, 57, 53, 0.1);
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+.register-page__alert--success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.register-page__alert-link {
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.register-page__divider {
+  position: relative;
+  text-align: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.register-page__divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--neutral-color);
+}
+
+.register-page__divider-text {
+  background: var(--white);
+  color: var(--medium-gray);
+  padding: 0 var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+  z-index: 1;
+}
+
+.register-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.register-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.register-page__label {
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.register-page__input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: var(--border-width) solid var(--medium-gray);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  background-color: var(--white);
+  color: var(--text-color);
+  transition: all var(--transition-fast);
+}
+
+.register-page__input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(90, 42, 140, 0.1);
+}
+
+.register-page__input:hover:not(:focus) {
+  border-color: var(--primary-light);
+}
+
+.register-page__submit-btn {
+  width: 100%;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: var(--spacing-sm);
+}
+
+.register-page__submit-btn:hover:not(:disabled) {
+  background: var(--gradient-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.register-page__submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-page__submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.register-page__footer-text {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+}
+
+.register-page__link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.register-page__link:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-page {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .register-page__container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .register-page__card {
+    padding: var(--spacing-xl);
+  }
+  
+  .register-page__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .register-page__card {
+    padding: var(--spacing-lg);
+  }
+  
+  .register-page__title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .register-page__form {
+    gap: var(--spacing-md);
+  }
+}

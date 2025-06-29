@@ -1,0 +1,172 @@
+/* client/src/styles/NotFound.css */
+
+/* Import fonts to match your existing design */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+.notfound-container {
+  font-family: 'Open Sans', sans-serif;
+  color: #2D2D2D;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: #FFF8ED;
+}
+
+.notfound-content {
+  max-width: 600px;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.notfound-icon {
+  margin-bottom: 1.5rem;
+}
+
+.error-code {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  color: #5A2A8C;
+  opacity: 0.8;
+  display: block;
+  line-height: 1;
+}
+
+.notfound-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #5A2A8C;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.notfound-message {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #2D2D2D;
+}
+
+.notfound-submessage {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  color: #666;
+}
+
+.notfound-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* Reuse your existing button styles */
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button.primary {
+  background-color: #5A2A8C;
+  color: white;
+  box-shadow: 0 4px 10px rgba(90, 42, 140, 0.2);
+}
+
+.cta-button.primary:hover {
+  background-color: #8A5CBA;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(90, 42, 140, 0.25);
+}
+
+.cta-button.outline {
+  background-color: transparent;
+  color: #5A2A8C;
+  border: 2px solid #5A2A8C;
+}
+
+.cta-button.outline:hover {
+  background-color: rgba(90, 42, 140, 0.05);
+  transform: translateY(-3px);
+}
+
+.notfound-help {
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E5E7;
+  color: #666;
+}
+
+.notfound-help p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.help-link {
+  color: #5A2A8C;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.help-link:hover {
+  color: #8A5CBA;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .notfound-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .notfound-title {
+    font-size: 2rem;
+  }
+  
+  .notfound-message {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .error-code {
+    font-size: 3rem;
+  }
+  
+  .notfound-title {
+    font-size: 1.75rem;
+  }
+  
+  .notfound-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}

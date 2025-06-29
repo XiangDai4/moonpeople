@@ -1,0 +1,242 @@
+.volunteer-registration-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF8ED 0%, #F5F5F7 100%);
+  padding: 40px 20px;
+}
+
+.registration-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.registration-header h1 {
+  font-size: 2.5rem;
+  color: #5A2A8C;
+  margin-bottom: 1rem;
+}
+
+.registration-header p {
+  font-size: 1.125rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.registration-form {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.form-section {
+  padding: 2rem;
+  border-bottom: 1px solid #E2D9F3;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  font-size: 1.5rem;
+  color: #5A2A8C;
+  margin-bottom: 0.5rem;
+}
+
+.form-section > p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #E2D9F3;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5A2A8C;
+  box-shadow: 0 0 0 3px rgba(90, 42, 140, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: #FFF8ED;
+  border: 2px solid #E2D9F3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkbox-item:hover {
+  background: #E2D9F3;
+  border-color: #5A2A8C;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.75rem;
+  transform: scale(1.2);
+}
+
+.checkbox-item input[type="checkbox"]:checked + span {
+  color: #5A2A8C;
+  font-weight: 600;
+}
+
+.checkbox-item span {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.form-actions {
+  padding: 2rem;
+  background: #F5F5F7;
+  text-align: center;
+}
+
+.submit-button {
+  background: #5A2A8C;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #8A5CBA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 42, 140, 0.3);
+}
+
+.submit-button:disabled {
+  background: #AAAABC;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  color: #C62828;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.success-message {
+  background: #E8F5E8;
+  border: 1px solid #C8E6C9;
+  color: #2E7D32;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Required field indicators */
+.form-group label:after {
+  content: " *";
+  color: #E53935;
+  font-weight: normal;
+}
+
+.form-group label:not([class*="required"]):after {
+  content: "";
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .volunteer-registration-page {
+    padding: 20px 10px;
+  }
+  
+  .registration-header {
+    padding: 1.5rem;
+  }
+  
+  .registration-header h1 {
+    font-size: 2rem;
+  }
+  
+  .form-section {
+    padding: 1.5rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    padding: 1.5rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .checkbox-item {
+    padding: 0.5rem;
+  }
+  
+  .checkbox-item span {
+    font-size: 0.85rem;
+  }
+}

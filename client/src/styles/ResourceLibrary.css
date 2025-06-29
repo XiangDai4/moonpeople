@@ -1,0 +1,305 @@
+.resource-library-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.resource-library-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.resource-library-header h1 {
+  color: #5A2A8C;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.resource-library-header p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.resource-library-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.resource-sidebar {
+  position: sticky;
+  top: 20px;
+  width: 300px;        /* ← exactly what your grid column is */
+  padding: 20px;       /* if you need some inner spacing */
+  box-sizing: border-box;
+}
+
+
+.resource-main {
+  min-height: 500px;
+  width: 100%;
+}
+
+.loading-message,
+.error-message,
+.no-results-message {
+  background-color: #F5F5F7;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: #2D2D2D;
+  margin: 20px 0;
+}
+
+.loading-message {
+  color: #5A2A8C;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #E53935;
+}
+
+.no-results-message button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #5A2A8C;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.no-results-message button:hover {
+  background-color: #8A5CBA;
+}
+
+.resource-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.resource-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.resource-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E2D9F3;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resource-category-header h2 {
+  margin: 0;
+  color: #5A2A8C;
+  font-size: 1.4rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.resource-count {
+  background-color: #E2D9F3;
+  color: #5A2A8C;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Ensure resource cards have proper spacing and layout */
+.resource-card {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #E2D9F3;
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(90, 42, 140, 0.1);
+}
+
+/* Filter component styling - to integrate with the sidebar */
+.resource-sidebar .filter-section {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.resource-sidebar h3,
+.resource-sidebar h4 {
+  color: #5A2A8C;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.resource-sidebar .search-input,
+.resource-sidebar select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.resource-sidebar .search-input:focus,
+.resource-sidebar select:focus {
+  outline: none;
+  border-color: #5A2A8C;
+  box-shadow: 0 0 0 2px rgba(90, 42, 140, 0.1);
+}
+
+/* 修改按钮容器布局 - Clear Filters按钮居中 */
+.resource-sidebar .filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center; /* 让所有按钮居中对齐 */
+}
+
+.resource-sidebar button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%; /* Apply按钮保持全宽 */
+}
+
+/* Clear按钮特殊样式 - 居中且宽度较小 */
+.resource-sidebar .clear-button {
+  width: auto;
+  min-width: 120px;
+  align-self: center; /* 确保Clear按钮居中 */
+}
+
+.resource-sidebar .apply-button {
+  background-color: #5A2A8C;
+  color: white;
+}
+
+.resource-sidebar .apply-button:hover {
+  background-color: #8A5CBA;
+}
+
+.resource-sidebar .clear-button {
+  background-color: #E2D9F3;
+  color: #5A2A8C;
+}
+
+.resource-sidebar .clear-button:hover {
+  background-color: #D1C7E8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .resource-library-content {
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+  }
+  
+  .resource-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-library-container {
+    padding: 20px 15px;
+  }
+  
+  .resource-library-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .resource-sidebar {
+    position: static;
+    margin-bottom: 20px;
+    order: 1;
+  }
+  
+  .resource-main {
+    order: 2;
+  }
+  
+  .resource-category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .resource-category-header h2 {
+    min-width: auto;
+  }
+  
+  .resource-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* 移动端保持垂直排列和居中 */
+  .resource-sidebar .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resource-sidebar button {
+    width: 100%;
+  }
+  
+  .resource-sidebar .clear-button {
+    width: auto;
+    min-width: 120px;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-library-container {
+    padding: 15px 10px;
+  }
+  
+  .resource-library-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .resource-library-header p {
+    font-size: 1rem;
+  }
+  
+  .resource-sidebar {
+    padding: 15px;
+  }
+  
+  .resource-category-header h2 {
+    font-size: 1.2rem;
+  }
+}

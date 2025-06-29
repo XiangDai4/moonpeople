@@ -1,0 +1,154 @@
+.create-resource-container,
+.edit-resource-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.create-resource-header,
+.edit-resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.create-resource-header h1,
+.edit-resource-header h1 {
+  color: #5A2A8C;
+  margin: 0;
+}
+
+.cancel-button {
+  padding: 8px 16px;
+  background-color: #E2D9F3;
+  color: #5A2A8C;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-button:hover {
+  background-color: #D9D0EE;
+}
+
+.create-resource-form-container,
+.edit-resource-form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.success-message {
+  background-color: #7BAE7F;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-message.form-error {
+  background-color: #F8E6E6;
+  color: #E53935;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #E53935;
+}
+
+.form-help-text {
+  padding: 15px 24px;
+  background-color: #F8F5FF;
+  border-top: 1px solid #E2D9F3;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.unauthorized-message {
+  background-color: #F8E6E6;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.unauthorized-message h2 {
+  color: #E53935;
+  margin-top: 0;
+}
+
+.unauthorized-message button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #5A2A8C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.unauthorized-message button:hover {
+  background-color: #8A5CBA;
+}
+
+.loading-message {
+  background-color: #F5F5F7;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: #5A2A8C;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.not-found-message {
+  background-color: #F8E6E6;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: #E53935;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.not-found-message button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #5A2A8C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .create-resource-header,
+  .edit-resource-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .cancel-button {
+    align-self: flex-start;
+  }
+}
